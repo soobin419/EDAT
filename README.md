@@ -106,7 +106,7 @@ We achieved state-of-the-art performance. Detailed results can be found in the p
 <details>
 <summary>Click to expan</summary>
 
-- results in Table 2 of the main paper
+- results in Table 3 of the main paper
 
 <p align="center">
   <img width="900" src="figs/Table3.PNG">
