@@ -5,9 +5,9 @@ scale: 2
 num_gpu: 4
 manual_seed: 42
 
-tile: # use the tile mode for limited GPU memory when testing.
-  tile_size: 256 # the higher, the more utilized GPU memory and the less performance change against the full image. must be an integer multiple of the window size.
-  tile_pad: 32 # overlapping between adjacency patches.must be an integer multiple of the window size.
+# tile: # use the tile mode for limited GPU memory when testing.
+#   tile_size: 256 # the higher, the more utilized GPU memory and the less performance change against the full image. must be an integer multiple of the window size.
+#   tile_pad: 32 # overlapping between adjacency patches.must be an integer multiple of the window size.
 
 datasets:
   test_1:  # the 1st test dataset
