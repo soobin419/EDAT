@@ -1,0 +1,43 @@
+# general settings
+name: test_EDAT_single_x3
+model_type: EDATModel #SwinIRModel
+scale: 3
+num_gpu: 4
+manual_seed: 42
+
+datasets:
+  test_1:  # the 1st test dataset
+    name: Single
+    type: SingleImageDataset
+    dataroot_lq: datasets/single
+    io_backend:
+      type: disk
+
+# network structures
+network_g:
+  type: EDAT
+  upscale: 3
+  in_chans: 3
+  img_size: 64
+  window_size: 8
+  squeeze_factor : 30
+  img_range: 1.
+  depths: [6, 6, 6, 6, 6, 6]
+  embed_dim: 180
+  num_heads: [6, 6, 6, 6, 6, 6]
+  mlp_ratio: 2
+  upsampler: 'pixelshuffle'
+  resi_connection: '1conv'
+
+# path
+path:
+  pretrain_network_g: './experiments/pretrained_models/EDAT_SRx3.pth'
+  strict_load_g: true
+  param_key_g: 'params_ema'
+
+# validation settings
+val:
+  save_img: true
+  suffix: ~  # add suffix to saved images, if None, use exp name
+
+
