@@ -10,10 +10,6 @@ from utils import get_root_logger, imwrite, tensor2img
 from utils.registry import MODEL_REGISTRY
 from .base_model import BaseModel
 
-from thop import profile
-from thop import clever_format
-
-
 @MODEL_REGISTRY.register()
 class SRModel(BaseModel):
     """Base SR model for single image super-resolution."""
@@ -25,11 +21,6 @@ class SRModel(BaseModel):
         self.net_g = build_network(opt['network_g'])
         self.net_g = self.model_to_device(self.net_g)
         self.print_network(self.net_g)
-        # input = torch.randn(1, 3, 160, 160).to('cuda')
-        # flops, params = profile(self.net_g, inputs=(input, ))
-        # flops, params = clever_format([flops, params], "%.3f")
-        # print(flops)
-        # print(params)
 
         # load pretrained models
         load_path = self.opt['path'].get('pretrain_network_g', None)
