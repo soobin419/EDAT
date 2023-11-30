@@ -19,7 +19,7 @@ network_g:
   upscale: 4
   in_chans: 3
   img_size: 64
-  window_size: 8
+  window_size: 16
   squeeze_factor : 30
   img_range: 1.
   depths: [6, 6, 6, 6, 6, 6]
