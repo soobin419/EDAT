@@ -944,7 +944,7 @@ class EDAT(nn.Module):
         # stochastic depth
         dpr = [x.item() for x in torch.linspace(0, drop_path_rate, sum(depths))]  # stochastic depth decay rule
 
-        # build Residual Swin Transformer blocks (RSTB)
+        # build Residual Transformer Group (RTG)
         self.layers = nn.ModuleList()
         for i_layer in range(self.num_layers):
             layer = RTG(
