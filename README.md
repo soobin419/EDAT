@@ -1,5 +1,5 @@
 # Efficient Dual Attention Transformer for Image Super-Resolution
-This repository is the official PyTorch implementation of **"Efficient Dual Attention Transformer for Image Super-Resolution".**
+This repository is the official PyTorch implementation of **"Efficient Dual Attention Transformer for Image Super-Resolution" (ACM SAC 2024).**
 
 [paper] [[visual results]](https://drive.google.com/drive/folders/1b-JuaImuZ3j9hdBnQX8pRSWg7zOB2gJC) [[pretrained models]](https://drive.google.com/drive/folders/1xu2bz72zmdzbpZanOc9F__C8ctL3FH3z)
 
